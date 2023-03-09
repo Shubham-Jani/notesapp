@@ -86,7 +86,7 @@ public class HelloApplication extends Application {
                 stage.setMinWidth(600);
                 stage.setMinHeight(400);
             } catch (Exception ex) {
-                throw new RuntimeException(ex);
+                System.out.println(ex );
             }
         });
         stage.show();

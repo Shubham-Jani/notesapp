@@ -58,6 +58,12 @@ public class DataBaseHandler {
         pstmt.setString(4,content);
         pstmt.execute();
     }
+    public  void deleteUniversal(String table_name, int id) throws  Exception{
+        Connection con = getConnection();
+        Statement stmt = con.createStatement();
+        String query = "DELETE FROM " + table_name + " WHERE id=" + id;
+        stmt.execute(query);
+    }
 
 //    public static void main(String[] args) throws  Exception {
 //        DataBaseHandler dbh = new DataBaseHandler();
